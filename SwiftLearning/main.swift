@@ -29,6 +29,8 @@ switch age
 {
 case 30..<60:
 	print("Switch 30..<60")
+case 0...1:
+	print("Switch 0...1")
 default:
 	break
 }
