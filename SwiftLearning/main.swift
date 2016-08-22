@@ -8,7 +8,21 @@
 
 import Foundation
 
-let hello_str = "Hello, World!"
+
+func inoutFunc(inout free:Int)
+{
+	free = 10
+}
+
+func testFunc( base_count:Int) -> Int
+{
+	var result_count = base_count
+	result_count += 10
+	return	result_count
+}
+
+
+let hello_str = "Hello, World!"// 定数
 print( hello_str )
 
 var age:Int = 0
@@ -25,13 +39,19 @@ for var i in 0..<3
 	print("For 3")
 }
 
-switch age
+loop_label: switch age
 {
 case 30..<60:
 	print("Switch 30..<60")
 case 0...1:
 	print("Switch 0...1")
 default:
-	break
+	break loop_label
 }
+
+var rewrite:Int = 0
+inoutFunc(&rewrite)
+print(rewrite)
+
+
 
